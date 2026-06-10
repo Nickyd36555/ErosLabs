@@ -622,3 +622,19 @@ main,
   background-color: rgba(0, 212, 255, 0.2);
   color: var(--white);
 }
+
+/* ============================================
+   21. PRODUCT IMAGE SIZE
+   ============================================ */
+.astra-shop-thumbnail-wrap {
+  height: 220px !important;
+}
+
+.astra-shop-thumbnail-wrap img,
+.woocommerce ul.products li.product a img,
+.woocommerce ul.products li.product .wp-post-image {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
