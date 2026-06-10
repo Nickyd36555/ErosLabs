@@ -1,0 +1,624 @@
+/* ============================================
+   EROS PEPTIDES - DARK CLINICAL THEME
+   Complete stylesheet for staging
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+/* ============================================
+   1. CSS VARIABLES
+   ============================================ */
+:root {
+  --bg:          #0a0a0a;
+  --bg-card:     #111111;
+  --bg-surface:  #1a1a1a;
+  --bg-hover:    #222222;
+  --border:      #2a2a2a;
+  --border-light:#333333;
+  --text:        #e8e8e8;
+  --text-muted:  #888888;
+  --text-dim:    #555555;
+  --accent:      #00d4ff;
+  --accent-dark: #0099bb;
+  --green:       #00ff88;
+  --white:       #ffffff;
+  --black:       #000000;
+  --danger:      #ff4444;
+  --font-body:   "Inter", sans-serif;
+  --font-head:   "Space Grotesk", sans-serif;
+  --radius:      6px;
+  --radius-lg:   10px;
+  --shadow:      0 2px 12px rgba(0,0,0,0.6);
+}
+
+/* ============================================
+   2. RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg) !important;
+}
+
+body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* ============================================
+   3. TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4, h5, h6,
+.elementor-heading-title {
+  color: var(--white) !important;
+  font-family: var(--font-head) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+}
+
+p, li, td, th, blockquote {
+  color: var(--text) !important;
+  font-family: var(--font-body) !important;
+}
+
+label, span:not(.elementor-icon):not(.onsale):not(.price) {
+  color: var(--text) !important;
+}
+
+a {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+a:hover, a:focus {
+  color: var(--accent-dark) !important;
+}
+
+strong, b {
+  color: var(--white) !important;
+}
+
+/* ============================================
+   4. HEADER
+   ============================================ */
+.main-header-bar,
+#masthead,
+.site-header,
+.ast-header-break-point .main-header-bar,
+.elementor-location-header {
+  background-color: #0d0d0d !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 1px 20px rgba(0,0,0,0.5) !important;
+}
+
+.site-title a, .site-title {
+  color: var(--white) !important;
+  font-family: var(--font-head) !important;
+}
+
+/* ============================================
+   5. NAVIGATION
+   ============================================ */
+.elementor-nav-menu--main .elementor-item,
+.elementor-nav-menu--main a {
+  color: var(--text-muted) !important;
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  transition: color 0.2s ease !important;
+}
+
+.elementor-nav-menu--main .elementor-item:hover,
+.elementor-nav-menu--main .elementor-item.elementor-item-active,
+.elementor-nav-menu--main .elementor-item:focus {
+  color: var(--accent) !important;
+  background-color: transparent !important;
+}
+
+.e--pointer-background .elementor-nav-menu--main .elementor-item:before,
+.e--pointer-background .elementor-nav-menu--main .elementor-item:after {
+  background-color: transparent !important;
+}
+
+/* Dropdown */
+.elementor-nav-menu--dropdown,
+.elementor-nav-menu--dropdown .elementor-item {
+  background-color: #0d0d0d !important;
+  border: 1px solid var(--border) !important;
+}
+
+.elementor-nav-menu--dropdown .elementor-item:hover {
+  background-color: var(--bg-surface) !important;
+  color: var(--accent) !important;
+}
+
+/* ============================================
+   6. SECTIONS & LAYOUT
+   ============================================ */
+.elementor-section,
+.e-con,
+.elementor-container,
+.elementor-column-wrap,
+.elementor-widget-wrap {
+  background-color: transparent !important;
+}
+
+.elementor-section.elementor-section-boxed > .elementor-container {
+  background-color: transparent !important;
+}
+
+.ast-container,
+.site-content,
+#content,
+.content-area {
+  background-color: var(--bg) !important;
+}
+
+/* ============================================
+   7. PRODUCT CARDS
+   ============================================ */
+.woocommerce ul.products li.product,
+.ast-woo-shop-archive .woocommerce ul.products li.product {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden !important;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+  box-shadow: var(--shadow) !important;
+  padding: 0 !important;
+}
+
+.woocommerce ul.products li.product:hover {
+  border-color: var(--accent) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.12) !important;
+}
+
+/* Product image area - solid black */
+.astra-shop-thumbnail-wrap,
+.woocommerce ul.products li.product a img,
+.woocommerce ul.products li.product .wp-post-image {
+  background-color: var(--black) !important;
+  display: block !important;
+}
+
+.astra-shop-thumbnail-wrap {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+/* Product info area */
+.woocommerce ul.products li.product .ast-woo-product-category,
+.woocommerce ul.products li.product .product-category-name {
+  color: var(--accent) !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h2 {
+  color: var(--white) !important;
+  font-family: var(--font-head) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  margin: 8px 12px 4px !important;
+}
+
+.woocommerce ul.products li.product .price {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  margin: 0 12px 12px !important;
+}
+
+.woocommerce ul.products li.product .price del {
+  color: var(--text-dim) !important;
+  font-size: 13px !important;
+}
+
+/* ============================================
+   8. OUT OF STOCK
+   ============================================ */
+.ast-shop-product-out-of-stock,
+.woocommerce ul.products li.product .ast-shop-product-out-of-stock {
+  background-color: rgba(0,0,0,0.8) !important;
+  color: var(--text-muted) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 4px !important;
+}
+
+/* ============================================
+   9. BUTTONS
+   ============================================ */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.elementor-button,
+.wp-block-button__link,
+.button:not(.ast-mobile-menu-buttons-fill):not(.menu-toggle) {
+  background-color: var(--accent) !important;
+  color: var(--black) !important;
+  border: none !important;
+  border-radius: var(--radius) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  padding: 10px 20px !important;
+  transition: background-color 0.2s ease, transform 0.15s ease !important;
+  cursor: pointer !important;
+  width: calc(100% - 24px) !important;
+  margin: 0 12px 12px !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.elementor-button:hover {
+  background-color: var(--accent-dark) !important;
+  color: var(--black) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Secondary/outline buttons */
+.woocommerce a.button.alt,
+.woocommerce button.button.alt {
+  background-color: transparent !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+}
+
+.woocommerce a.button.alt:hover {
+  background-color: var(--accent) !important;
+  color: var(--black) !important;
+}
+
+/* ============================================
+   10. FORMS & INPUTS
+   ============================================ */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select,
+.input-text {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-light) !important;
+  color: var(--text) !important;
+  border-radius: var(--radius) !important;
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  padding: 10px 14px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.input-text:focus {
+  border-color: var(--accent) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1) !important;
+  background-color: var(--bg-hover) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-dim) !important;
+}
+
+/* ============================================
+   11. BADGES & LABELS
+   ============================================ */
+.woocommerce span.onsale,
+.onsale {
+  background-color: var(--green) !important;
+  color: var(--black) !important;
+  border-radius: 4px !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  padding: 3px 8px !important;
+}
+
+/* ============================================
+   12. SIDEBAR & WIDGETS
+   ============================================ */
+.widget-area .widget,
+.woocommerce-widget-layered-nav,
+.woocommerce-product-search,
+.widget_product_categories {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.widget-title,
+.widgettitle {
+  color: var(--white) !important;
+  font-family: var(--font-head) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 15px !important;
+}
+
+.widget_product_categories li,
+.widget_product_categories li a,
+.woocommerce-widget-layered-nav li a {
+  color: var(--text-muted) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  transition: color 0.2s ease !important;
+}
+
+.widget_product_categories li a:hover,
+.woocommerce-widget-layered-nav li a:hover {
+  color: var(--accent) !important;
+}
+
+/* ============================================
+   13. CART & CHECKOUT
+   ============================================ */
+.woocommerce-cart table.cart,
+.woocommerce table.shop_table {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden !important;
+}
+
+.woocommerce table.shop_table th {
+  background-color: var(--bg-surface) !important;
+  color: var(--accent) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  border-color: var(--border) !important;
+  padding: 14px 16px !important;
+}
+
+.woocommerce table.shop_table td {
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+  padding: 14px 16px !important;
+}
+
+.woocommerce table.shop_table tr:hover td {
+  background-color: var(--bg-hover) !important;
+}
+
+.order-total .amount,
+.woocommerce-Price-amount.amount {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+}
+
+.cart-collaterals,
+.woocommerce-cart-form,
+.cart_totals {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 24px !important;
+}
+
+/* ============================================
+   14. NOTICES & ALERTS
+   ============================================ */
+.woocommerce-message,
+.woocommerce-info {
+  background-color: var(--bg-surface) !important;
+  border-top-color: var(--accent) !important;
+  color: var(--text) !important;
+  border-radius: var(--radius) !important;
+}
+
+.woocommerce-error {
+  background-color: var(--bg-surface) !important;
+  border-top-color: var(--danger) !important;
+  color: var(--text) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* ============================================
+   15. FOOTER
+   ============================================ */
+.site-footer,
+#colophon,
+.footer-widget-area,
+.ast-footer-overlay,
+.elementor-location-footer {
+  background-color: #0d0d0d !important;
+  border-top: 1px solid var(--border) !important;
+  color: var(--text-muted) !important;
+}
+
+.site-footer a,
+#colophon a {
+  color: var(--text-muted) !important;
+}
+
+.site-footer a:hover,
+#colophon a:hover {
+  color: var(--accent) !important;
+}
+
+/* ============================================
+   16. TABLES
+   ============================================ */
+table {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border) !important;
+}
+
+table th {
+  background-color: var(--bg-surface) !important;
+  color: var(--accent) !important;
+}
+
+table td {
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+/* ============================================
+   17. SEARCH
+   ============================================ */
+.dgwt-wcas-search-form,
+.search-form {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+.dgwt-wcas-search-input,
+.search-field {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--text) !important;
+}
+
+/* ============================================
+   18. PAGINATION
+   ============================================ */
+.woocommerce-pagination .page-numbers li .page-numbers,
+.page-numbers {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text) !important;
+  border-radius: var(--radius) !important;
+}
+
+.woocommerce-pagination .page-numbers li .page-numbers.current,
+.page-numbers.current {
+  background-color: var(--accent) !important;
+  color: var(--black) !important;
+  border-color: var(--accent) !important;
+}
+
+/* ============================================
+   19. SINGLE PRODUCT PAGE
+   ============================================ */
+.single-product .woocommerce-product-gallery__wrapper {
+  background-color: var(--black) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden !important;
+  border: 1px solid var(--border) !important;
+}
+
+.single-product .product_title {
+  color: var(--white) !important;
+  font-family: var(--font-head) !important;
+}
+
+.single-product .price {
+  color: var(--accent) !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.woocommerce-product-details__short-description {
+  color: var(--text-muted) !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+.woocommerce-tabs .tabs li {
+  background-color: var(--bg-surface) !important;
+  border-color: var(--border) !important;
+}
+
+.woocommerce-tabs .tabs li.active {
+  background-color: var(--bg-card) !important;
+  border-bottom-color: var(--bg-card) !important;
+}
+
+.woocommerce-tabs .tabs li a {
+  color: var(--text-muted) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+
+.woocommerce-tabs .tabs li.active a {
+  color: var(--accent) !important;
+}
+
+.woocommerce-Tabs-panel {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) var(--radius-lg) !important;
+  padding: 24px !important;
+}
+
+/* ============================================
+   20. MISC FIXES
+   ============================================ */
+
+/* Fix white backgrounds leaking through */
+.ast-woo-shop-archive,
+.woocommerce,
+.woocommerce-page,
+#primary,
+#secondary,
+main,
+.site-main {
+  background-color: var(--bg) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(0, 212, 255, 0.2);
+  color: var(--white);
+}
