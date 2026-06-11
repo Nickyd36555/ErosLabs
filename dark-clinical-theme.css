@@ -638,3 +638,188 @@ main,
   object-fit: contain !important;
   object-position: center !important;
 }
+
+/* ============================================
+   22. LIGHT MODE OVERRIDES
+   ============================================ */
+body.light-mode {
+  background-color: #f5f5f5 !important;
+  color: #1a1a1a !important;
+}
+
+body.light-mode .main-header-bar,
+body.light-mode #masthead,
+body.light-mode .site-header,
+body.light-mode .elementor-location-header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .elementor-nav-menu--main .elementor-item,
+body.light-mode .elementor-nav-menu--main a {
+  color: #555555 !important;
+}
+
+body.light-mode .elementor-nav-menu--main .elementor-item:hover,
+body.light-mode .elementor-nav-menu--main .elementor-item.elementor-item-active {
+  color: #0099bb !important;
+}
+
+body.light-mode .ast-container,
+body.light-mode .site-content,
+body.light-mode #content,
+body.light-mode .content-area,
+body.light-mode .ast-woo-shop-archive,
+body.light-mode .woocommerce,
+body.light-mode .woocommerce-page,
+body.light-mode #primary,
+body.light-mode #secondary,
+body.light-mode main,
+body.light-mode .site-main {
+  background-color: #f5f5f5 !important;
+}
+
+body.light-mode h1, body.light-mode h2, body.light-mode h3,
+body.light-mode h4, body.light-mode h5, body.light-mode h6,
+body.light-mode .elementor-heading-title {
+  color: #111111 !important;
+}
+
+body.light-mode p, body.light-mode li,
+body.light-mode td, body.light-mode th {
+  color: #333333 !important;
+}
+
+body.light-mode a {
+  color: #0099bb !important;
+}
+
+body.light-mode strong, body.light-mode b {
+  color: #111111 !important;
+}
+
+body.light-mode .woocommerce ul.products li.product {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+}
+
+body.light-mode .woocommerce ul.products li.product:hover {
+  border-color: #0099bb !important;
+  box-shadow: 0 8px 24px rgba(0,153,187,0.12) !important;
+}
+
+body.light-mode .astra-shop-thumbnail-wrap,
+body.light-mode .woocommerce ul.products li.product a img,
+body.light-mode .woocommerce ul.products li.product .wp-post-image {
+  background-color: #f9f9f9 !important;
+}
+
+body.light-mode .woocommerce ul.products li.product .woocommerce-loop-product__title,
+body.light-mode .woocommerce ul.products li.product h2 {
+  color: #111111 !important;
+}
+
+body.light-mode .woocommerce ul.products li.product .price {
+  color: #0099bb !important;
+}
+
+body.light-mode .woocommerce a.button,
+body.light-mode .woocommerce button.button,
+body.light-mode .elementor-button,
+body.light-mode .button:not(.ast-mobile-menu-buttons-fill):not(.menu-toggle) {
+  background-color: #00d4ff !important;
+  color: #000000 !important;
+}
+
+body.light-mode input[type="text"],
+body.light-mode input[type="email"],
+body.light-mode input[type="password"],
+body.light-mode input[type="search"],
+body.light-mode input[type="number"],
+body.light-mode input[type="tel"],
+body.light-mode textarea,
+body.light-mode select {
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc !important;
+  color: #1a1a1a !important;
+}
+
+body.light-mode .woocommerce-cart table.cart,
+body.light-mode .woocommerce table.shop_table,
+body.light-mode .cart-collaterals,
+body.light-mode .woocommerce-cart-form,
+body.light-mode .cart_totals {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+}
+
+body.light-mode .woocommerce table.shop_table th {
+  background-color: #f0f0f0 !important;
+  color: #0099bb !important;
+}
+
+body.light-mode .woocommerce table.shop_table td {
+  border-color: #e0e0e0 !important;
+  color: #333333 !important;
+}
+
+body.light-mode .site-footer,
+body.light-mode #colophon,
+body.light-mode .elementor-location-footer {
+  background-color: #ffffff !important;
+  border-top: 1px solid #e0e0e0 !important;
+  color: #555555 !important;
+}
+
+body.light-mode .widget-area .widget {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+}
+
+body.light-mode label,
+body.light-mode span:not(.elementor-icon):not(.onsale):not(.price) {
+  color: #333333 !important;
+}
+
+/* Toggle button */
+#theme-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #e8e8e8;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+#theme-toggle:hover {
+  border-color: #00d4ff;
+  color: #00d4ff;
+}
+
+body.light-mode #theme-toggle {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #333333;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+body.light-mode #theme-toggle:hover {
+  border-color: #0099bb;
+  color: #0099bb;
+}
