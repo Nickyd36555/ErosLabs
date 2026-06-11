@@ -18,8 +18,8 @@
   --text:        #e8e8e8;
   --text-muted:  #888888;
   --text-dim:    #555555;
-  --accent:      #00d4ff;
-  --accent-dark: #0099bb;
+  --accent:      #1a4bcc;
+  --accent-dark: #1238a0;
   --green:       #00ff88;
   --white:       #ffffff;
   --black:       #000000;
@@ -34,13 +34,9 @@
 /* ============================================
    2. RESET & BASE
    ============================================ */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
-html {
-  background-color: var(--bg) !important;
-}
+html { background-color: var(--bg) !important; }
 
 body {
   background-color: var(--bg) !important;
@@ -54,8 +50,7 @@ body {
 /* ============================================
    3. TYPOGRAPHY
    ============================================ */
-h1, h2, h3, h4, h5, h6,
-.elementor-heading-title {
+h1, h2, h3, h4, h5, h6, .elementor-heading-title {
   color: var(--white) !important;
   font-family: var(--font-head) !important;
   font-weight: 600 !important;
@@ -68,30 +63,16 @@ p, li, td, th, blockquote {
   font-family: var(--font-body) !important;
 }
 
-label, span:not(.elementor-icon):not(.onsale):not(.price) {
-  color: var(--text) !important;
-}
+label, span:not(.elementor-icon):not(.onsale):not(.price) { color: var(--text) !important; }
 
-a {
-  color: var(--accent) !important;
-  text-decoration: none !important;
-  transition: color 0.2s ease !important;
-}
-
-a:hover, a:focus {
-  color: var(--accent-dark) !important;
-}
-
-strong, b {
-  color: var(--white) !important;
-}
+a { color: var(--accent) !important; text-decoration: none !important; transition: color 0.2s ease !important; }
+a:hover, a:focus { color: var(--accent-dark) !important; }
+strong, b { color: var(--white) !important; }
 
 /* ============================================
    4. HEADER
    ============================================ */
-.main-header-bar,
-#masthead,
-.site-header,
+.main-header-bar, #masthead, .site-header,
 .ast-header-break-point .main-header-bar,
 .elementor-location-header {
   background-color: #0d0d0d !important;
@@ -130,7 +111,6 @@ strong, b {
   background-color: transparent !important;
 }
 
-/* Dropdown */
 .elementor-nav-menu--dropdown,
 .elementor-nav-menu--dropdown .elementor-item {
   background-color: #0d0d0d !important;
@@ -145,11 +125,8 @@ strong, b {
 /* ============================================
    6. SECTIONS & LAYOUT
    ============================================ */
-.elementor-section,
-.e-con,
-.elementor-container,
-.elementor-column-wrap,
-.elementor-widget-wrap {
+.elementor-section, .e-con, .elementor-container,
+.elementor-column-wrap, .elementor-widget-wrap {
   background-color: transparent !important;
 }
 
@@ -157,10 +134,7 @@ strong, b {
   background-color: transparent !important;
 }
 
-.ast-container,
-.site-content,
-#content,
-.content-area {
+.ast-container, .site-content, #content, .content-area {
   background-color: var(--bg) !important;
 }
 
@@ -181,10 +155,9 @@ strong, b {
 .woocommerce ul.products li.product:hover {
   border-color: var(--accent) !important;
   transform: translateY(-3px) !important;
-  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.12) !important;
+  box-shadow: 0 8px 30px rgba(26, 75, 204, 0.2) !important;
 }
 
-/* Product image area - solid black */
 .astra-shop-thumbnail-wrap,
 .woocommerce ul.products li.product a img,
 .woocommerce ul.products li.product .wp-post-image {
@@ -198,7 +171,6 @@ strong, b {
   border-bottom: 1px solid var(--border) !important;
 }
 
-/* Product info area */
 .woocommerce ul.products li.product .ast-woo-product-category,
 .woocommerce ul.products li.product .product-category-name {
   color: var(--accent) !important;
@@ -229,6 +201,13 @@ strong, b {
   font-size: 13px !important;
 }
 
+.woocommerce ul.products li.product .stock,
+.woocommerce ul.products li.product p.stock {
+  color: var(--text-dim) !important;
+  font-size: 11px !important;
+  margin: 0 12px 8px !important;
+}
+
 /* ============================================
    8. OUT OF STOCK
    ============================================ */
@@ -255,7 +234,7 @@ strong, b {
 .wp-block-button__link,
 .button:not(.ast-mobile-menu-buttons-fill):not(.menu-toggle) {
   background-color: var(--accent) !important;
-  color: var(--black) !important;
+  color: var(--white) !important;
   border: none !important;
   border-radius: var(--radius) !important;
   font-family: var(--font-body) !important;
@@ -276,11 +255,10 @@ strong, b {
 .woocommerce button.button:hover,
 .elementor-button:hover {
   background-color: var(--accent-dark) !important;
-  color: var(--black) !important;
+  color: var(--white) !important;
   transform: translateY(-1px) !important;
 }
 
-/* Secondary/outline buttons */
 .woocommerce a.button.alt,
 .woocommerce button.button.alt {
   background-color: transparent !important;
@@ -290,7 +268,7 @@ strong, b {
 
 .woocommerce a.button.alt:hover {
   background-color: var(--accent) !important;
-  color: var(--black) !important;
+  color: var(--white) !important;
 }
 
 /* ============================================
@@ -302,9 +280,7 @@ input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="tel"],
-textarea,
-select,
-.input-text {
+textarea, select, .input-text {
   background-color: var(--bg-surface) !important;
   border: 1px solid var(--border-light) !important;
   color: var(--text) !important;
@@ -315,26 +291,39 @@ select,
   transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
 }
 
-input:focus,
-textarea:focus,
-select:focus,
-.input-text:focus {
+input:focus, textarea:focus, select:focus, .input-text:focus {
   border-color: var(--accent) !important;
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1) !important;
+  box-shadow: 0 0 0 3px rgba(26, 75, 204, 0.15) !important;
   background-color: var(--bg-hover) !important;
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: var(--text-dim) !important;
+input::placeholder, textarea::placeholder { color: var(--text-dim) !important; }
+
+/* ============================================
+   11. SEARCH BAR — remove thick border
+   ============================================ */
+.dgwt-wcas-search-form, .search-form {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+
+.dgwt-wcas-search-input, .search-field,
+input[type="search"] {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: var(--text) !important;
 }
 
 /* ============================================
-   11. BADGES & LABELS
+   12. BADGES
    ============================================ */
-.woocommerce span.onsale,
-.onsale {
+.woocommerce span.onsale, .onsale {
   background-color: var(--green) !important;
   color: var(--black) !important;
   border-radius: 4px !important;
@@ -346,7 +335,7 @@ textarea::placeholder {
 }
 
 /* ============================================
-   12. SIDEBAR & WIDGETS
+   13. SIDEBAR & WIDGETS
    ============================================ */
 .widget-area .widget,
 .woocommerce-widget-layered-nav,
@@ -359,8 +348,7 @@ textarea::placeholder {
   margin-bottom: 20px !important;
 }
 
-.widget-title,
-.widgettitle {
+.widget-title, .widgettitle {
   color: var(--white) !important;
   font-family: var(--font-head) !important;
   font-size: 11px !important;
@@ -384,12 +372,10 @@ textarea::placeholder {
 }
 
 .widget_product_categories li a:hover,
-.woocommerce-widget-layered-nav li a:hover {
-  color: var(--accent) !important;
-}
+.woocommerce-widget-layered-nav li a:hover { color: var(--accent) !important; }
 
 /* ============================================
-   13. CART & CHECKOUT
+   14. CART & CHECKOUT
    ============================================ */
 .woocommerce-cart table.cart,
 .woocommerce table.shop_table {
@@ -416,19 +402,12 @@ textarea::placeholder {
   padding: 14px 16px !important;
 }
 
-.woocommerce table.shop_table tr:hover td {
-  background-color: var(--bg-hover) !important;
-}
+.woocommerce table.shop_table tr:hover td { background-color: var(--bg-hover) !important; }
 
 .order-total .amount,
-.woocommerce-Price-amount.amount {
-  color: var(--accent) !important;
-  font-weight: 700 !important;
-}
+.woocommerce-Price-amount.amount { color: var(--accent) !important; font-weight: 700 !important; }
 
-.cart-collaterals,
-.woocommerce-cart-form,
-.cart_totals {
+.cart-collaterals, .woocommerce-cart-form, .cart_totals {
   background-color: var(--bg-card) !important;
   border: 1px solid var(--border) !important;
   border-radius: var(--radius-lg) !important;
@@ -436,10 +415,20 @@ textarea::placeholder {
 }
 
 /* ============================================
-   14. NOTICES & ALERTS
+   15. LOGIN & REGISTER FORMS
    ============================================ */
-.woocommerce-message,
-.woocommerce-info {
+.woocommerce-form-login,
+.woocommerce-form-register {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 24px !important;
+}
+
+/* ============================================
+   16. NOTICES
+   ============================================ */
+.woocommerce-message, .woocommerce-info {
   background-color: var(--bg-surface) !important;
   border-top-color: var(--accent) !important;
   color: var(--text) !important;
@@ -454,84 +443,43 @@ textarea::placeholder {
 }
 
 /* ============================================
-   15. FOOTER
+   17. FOOTER
    ============================================ */
-.site-footer,
-#colophon,
-.footer-widget-area,
-.ast-footer-overlay,
-.elementor-location-footer {
+.site-footer, #colophon, .footer-widget-area,
+.ast-footer-overlay, .elementor-location-footer {
   background-color: #0d0d0d !important;
   border-top: 1px solid var(--border) !important;
   color: var(--text-muted) !important;
 }
 
-.site-footer a,
-#colophon a {
-  color: var(--text-muted) !important;
-}
-
-.site-footer a:hover,
-#colophon a:hover {
-  color: var(--accent) !important;
-}
+.site-footer a, #colophon a { color: var(--text-muted) !important; }
+.site-footer a:hover, #colophon a:hover { color: var(--accent) !important; }
 
 /* ============================================
-   16. TABLES
+   18. TABLES
    ============================================ */
-table {
-  background-color: var(--bg-card) !important;
-  border-color: var(--border) !important;
-}
-
-table th {
-  background-color: var(--bg-surface) !important;
-  color: var(--accent) !important;
-}
-
-table td {
-  border-color: var(--border) !important;
-  color: var(--text) !important;
-}
+table { background-color: var(--bg-card) !important; border-color: var(--border) !important; }
+table th { background-color: var(--bg-surface) !important; color: var(--accent) !important; }
+table td { border-color: var(--border) !important; color: var(--text) !important; }
 
 /* ============================================
-   17. SEARCH
+   19. PAGINATION
    ============================================ */
-.dgwt-wcas-search-form,
-.search-form {
-  background-color: var(--bg-surface) !important;
-  border: 1px solid var(--border-light) !important;
-  border-radius: 20px !important;
-  overflow: hidden !important;
-}
-
-.dgwt-wcas-search-input,
-.search-field {
-  background-color: transparent !important;
-  border: none !important;
-  color: var(--text) !important;
-}
-
-/* ============================================
-   18. PAGINATION
-   ============================================ */
-.woocommerce-pagination .page-numbers li .page-numbers,
-.page-numbers {
+.woocommerce-pagination .page-numbers li .page-numbers, .page-numbers {
   background-color: var(--bg-card) !important;
   border: 1px solid var(--border) !important;
   color: var(--text) !important;
   border-radius: var(--radius) !important;
 }
 
-.woocommerce-pagination .page-numbers li .page-numbers.current,
-.page-numbers.current {
+.woocommerce-pagination .page-numbers li .page-numbers.current, .page-numbers.current {
   background-color: var(--accent) !important;
-  color: var(--black) !important;
+  color: var(--white) !important;
   border-color: var(--accent) !important;
 }
 
 /* ============================================
-   19. SINGLE PRODUCT PAGE
+   20. SINGLE PRODUCT
    ============================================ */
 .single-product .woocommerce-product-gallery__wrapper {
   background-color: var(--black) !important;
@@ -540,16 +488,8 @@ table td {
   border: 1px solid var(--border) !important;
 }
 
-.single-product .product_title {
-  color: var(--white) !important;
-  font-family: var(--font-head) !important;
-}
-
-.single-product .price {
-  color: var(--accent) !important;
-  font-size: 24px !important;
-  font-weight: 700 !important;
-}
+.single-product .product_title { color: var(--white) !important; font-family: var(--font-head) !important; }
+.single-product .price { color: var(--accent) !important; font-size: 24px !important; font-weight: 700 !important; }
 
 .woocommerce-product-details__short-description {
   color: var(--text-muted) !important;
@@ -557,27 +497,10 @@ table td {
   line-height: 1.7 !important;
 }
 
-.woocommerce-tabs .tabs li {
-  background-color: var(--bg-surface) !important;
-  border-color: var(--border) !important;
-}
-
-.woocommerce-tabs .tabs li.active {
-  background-color: var(--bg-card) !important;
-  border-bottom-color: var(--bg-card) !important;
-}
-
-.woocommerce-tabs .tabs li a {
-  color: var(--text-muted) !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.1em !important;
-  text-transform: uppercase !important;
-}
-
-.woocommerce-tabs .tabs li.active a {
-  color: var(--accent) !important;
-}
+.woocommerce-tabs .tabs li { background-color: var(--bg-surface) !important; border-color: var(--border) !important; }
+.woocommerce-tabs .tabs li.active { background-color: var(--bg-card) !important; border-bottom-color: var(--bg-card) !important; }
+.woocommerce-tabs .tabs li a { color: var(--text-muted) !important; font-size: 12px !important; font-weight: 600 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; }
+.woocommerce-tabs .tabs li.active a { color: var(--accent) !important; }
 
 .woocommerce-Tabs-panel {
   background-color: var(--bg-card) !important;
@@ -587,48 +510,33 @@ table td {
 }
 
 /* ============================================
-   20. MISC FIXES
+   21. LOGO INVERT (dark mode)
    ============================================ */
-
-/* Fix white backgrounds leaking through */
-.ast-woo-shop-archive,
-.woocommerce,
-.woocommerce-page,
-#primary,
-#secondary,
-main,
-.site-main {
-  background-color: var(--bg) !important;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--border-light);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
-}
-
-/* Selection */
-::selection {
-  background-color: rgba(0, 212, 255, 0.2);
-  color: var(--white);
+.elementor-location-header img.elementor-image,
+.site-logo img,
+.custom-logo,
+.elementor-widget-image img {
+  filter: invert(1) !important;
 }
 
 /* ============================================
-   21. PRODUCT IMAGE SIZE
+   22. MISC FIXES
    ============================================ */
-.astra-shop-thumbnail-wrap {
-  height: 220px !important;
+.ast-woo-shop-archive, .woocommerce, .woocommerce-page,
+#primary, #secondary, main, .site-main {
+  background-color: var(--bg) !important;
 }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+::selection { background-color: rgba(26, 75, 204, 0.25); color: var(--white); }
+
+/* ============================================
+   23. PRODUCT IMAGE SIZE
+   ============================================ */
+.astra-shop-thumbnail-wrap { height: 220px !important; }
 
 .astra-shop-thumbnail-wrap img,
 .woocommerce ul.products li.product a img,
@@ -640,64 +548,40 @@ main,
 }
 
 /* ============================================
-   22. LIGHT MODE OVERRIDES
+   24. LIGHT MODE
    ============================================ */
-body.light-mode {
-  background-color: #f5f5f5 !important;
-  color: #1a1a1a !important;
-}
+body.light-mode { background-color: #f5f5f5 !important; color: #1a1a1a !important; }
 
-body.light-mode .main-header-bar,
-body.light-mode #masthead,
-body.light-mode .site-header,
-body.light-mode .elementor-location-header {
+body.light-mode .main-header-bar, body.light-mode #masthead,
+body.light-mode .site-header, body.light-mode .elementor-location-header {
   background-color: #ffffff !important;
   border-bottom: 1px solid #e0e0e0 !important;
   box-shadow: 0 1px 10px rgba(0,0,0,0.08) !important;
 }
 
 body.light-mode .elementor-nav-menu--main .elementor-item,
-body.light-mode .elementor-nav-menu--main a {
-  color: #555555 !important;
-}
+body.light-mode .elementor-nav-menu--main a { color: #555555 !important; }
 
 body.light-mode .elementor-nav-menu--main .elementor-item:hover,
-body.light-mode .elementor-nav-menu--main .elementor-item.elementor-item-active {
-  color: #0099bb !important;
-}
+body.light-mode .elementor-nav-menu--main .elementor-item.elementor-item-active { color: #1a4bcc !important; }
 
-body.light-mode .ast-container,
-body.light-mode .site-content,
-body.light-mode #content,
-body.light-mode .content-area,
-body.light-mode .ast-woo-shop-archive,
-body.light-mode .woocommerce,
-body.light-mode .woocommerce-page,
-body.light-mode #primary,
-body.light-mode #secondary,
-body.light-mode main,
-body.light-mode .site-main {
+body.light-mode .ast-container, body.light-mode .site-content,
+body.light-mode #content, body.light-mode .content-area,
+body.light-mode .ast-woo-shop-archive, body.light-mode .woocommerce,
+body.light-mode .woocommerce-page, body.light-mode #primary,
+body.light-mode #secondary, body.light-mode main, body.light-mode .site-main {
   background-color: #f5f5f5 !important;
 }
 
 body.light-mode h1, body.light-mode h2, body.light-mode h3,
 body.light-mode h4, body.light-mode h5, body.light-mode h6,
-body.light-mode .elementor-heading-title {
-  color: #111111 !important;
-}
+body.light-mode .elementor-heading-title { color: #111111 !important; }
 
 body.light-mode p, body.light-mode li,
-body.light-mode td, body.light-mode th {
-  color: #333333 !important;
-}
+body.light-mode td, body.light-mode th { color: #333333 !important; }
 
-body.light-mode a {
-  color: #0099bb !important;
-}
-
-body.light-mode strong, body.light-mode b {
-  color: #111111 !important;
-}
+body.light-mode a { color: #1a4bcc !important; }
+body.light-mode strong, body.light-mode b { color: #111111 !important; }
 
 body.light-mode .woocommerce ul.products li.product {
   background-color: #ffffff !important;
@@ -706,68 +590,45 @@ body.light-mode .woocommerce ul.products li.product {
 }
 
 body.light-mode .woocommerce ul.products li.product:hover {
-  border-color: #0099bb !important;
-  box-shadow: 0 8px 24px rgba(0,153,187,0.12) !important;
+  border-color: #1a4bcc !important;
+  box-shadow: 0 8px 24px rgba(26,75,204,0.12) !important;
 }
 
 body.light-mode .astra-shop-thumbnail-wrap,
 body.light-mode .woocommerce ul.products li.product a img,
-body.light-mode .woocommerce ul.products li.product .wp-post-image {
-  background-color: #f9f9f9 !important;
-}
+body.light-mode .woocommerce ul.products li.product .wp-post-image { background-color: #f9f9f9 !important; }
 
 body.light-mode .woocommerce ul.products li.product .woocommerce-loop-product__title,
-body.light-mode .woocommerce ul.products li.product h2 {
-  color: #111111 !important;
-}
+body.light-mode .woocommerce ul.products li.product h2 { color: #111111 !important; }
 
-body.light-mode .woocommerce ul.products li.product .price {
-  color: #0099bb !important;
-}
+body.light-mode .woocommerce ul.products li.product .price { color: #1a4bcc !important; }
 
-body.light-mode .woocommerce a.button,
-body.light-mode .woocommerce button.button,
+body.light-mode .woocommerce a.button, body.light-mode .woocommerce button.button,
 body.light-mode .elementor-button,
 body.light-mode .button:not(.ast-mobile-menu-buttons-fill):not(.menu-toggle) {
-  background-color: #00d4ff !important;
-  color: #000000 !important;
+  background-color: #1a4bcc !important;
+  color: #ffffff !important;
 }
 
-body.light-mode input[type="text"],
-body.light-mode input[type="email"],
-body.light-mode input[type="password"],
-body.light-mode input[type="search"],
-body.light-mode input[type="number"],
-body.light-mode input[type="tel"],
-body.light-mode textarea,
-body.light-mode select {
+body.light-mode input[type="text"], body.light-mode input[type="email"],
+body.light-mode input[type="password"], body.light-mode input[type="search"],
+body.light-mode input[type="number"], body.light-mode input[type="tel"],
+body.light-mode textarea, body.light-mode select {
   background-color: #ffffff !important;
   border: 1px solid #cccccc !important;
   color: #1a1a1a !important;
 }
 
-body.light-mode .woocommerce-cart table.cart,
-body.light-mode .woocommerce table.shop_table,
-body.light-mode .cart-collaterals,
-body.light-mode .woocommerce-cart-form,
-body.light-mode .cart_totals {
+body.light-mode .woocommerce-cart table.cart, body.light-mode .woocommerce table.shop_table,
+body.light-mode .cart-collaterals, body.light-mode .woocommerce-cart-form, body.light-mode .cart_totals {
   background-color: #ffffff !important;
   border: 1px solid #e0e0e0 !important;
 }
 
-body.light-mode .woocommerce table.shop_table th {
-  background-color: #f0f0f0 !important;
-  color: #0099bb !important;
-}
+body.light-mode .woocommerce table.shop_table th { background-color: #f0f0f0 !important; color: #1a4bcc !important; }
+body.light-mode .woocommerce table.shop_table td { border-color: #e0e0e0 !important; color: #333333 !important; }
 
-body.light-mode .woocommerce table.shop_table td {
-  border-color: #e0e0e0 !important;
-  color: #333333 !important;
-}
-
-body.light-mode .site-footer,
-body.light-mode #colophon,
-body.light-mode .elementor-location-footer {
+body.light-mode .site-footer, body.light-mode #colophon, body.light-mode .elementor-location-footer {
   background-color: #ffffff !important;
   border-top: 1px solid #e0e0e0 !important;
   color: #555555 !important;
@@ -779,11 +640,17 @@ body.light-mode .widget-area .widget {
 }
 
 body.light-mode label,
-body.light-mode span:not(.elementor-icon):not(.onsale):not(.price) {
-  color: #333333 !important;
-}
+body.light-mode span:not(.elementor-icon):not(.onsale):not(.price) { color: #333333 !important; }
 
-/* Toggle button */
+/* Light mode — restore logo */
+body.light-mode .elementor-location-header img.elementor-image,
+body.light-mode .site-logo img,
+body.light-mode .custom-logo,
+body.light-mode .elementor-widget-image img { filter: none !important; }
+
+/* ============================================
+   25. TOGGLE BUTTON
+   ============================================ */
 #theme-toggle {
   position: fixed;
   bottom: 24px;
@@ -807,10 +674,7 @@ body.light-mode span:not(.elementor-icon):not(.onsale):not(.price) {
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-#theme-toggle:hover {
-  border-color: #00d4ff;
-  color: #00d4ff;
-}
+#theme-toggle:hover { border-color: #1a4bcc; color: #1a4bcc; }
 
 body.light-mode #theme-toggle {
   background-color: #ffffff;
@@ -819,7 +683,4 @@ body.light-mode #theme-toggle {
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-body.light-mode #theme-toggle:hover {
-  border-color: #0099bb;
-  color: #0099bb;
-}
+body.light-mode #theme-toggle:hover { border-color: #1a4bcc; color: #1a4bcc; }
