@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 #body_content { background-color: #ffffff !important; }
 #body_content table td { padding: 28px 48px !important; background-color: #ffffff !important; }
 #body_content p, #body_content_inner p { font-size: 15px !important; line-height: 1.8 !important; color: #333333 !important; }
-h2 { font-family: "Courier New", Courier, monospace !important; font-size: 20px !important; font-weight: normal !important; color: #0a0a0a !important; }
+h2 { font-family: Arial, Helvetica, sans-serif !important; font-size: 10px !important; font-weight: normal !important; letter-spacing: 0.2em !important; text-transform: uppercase !important; color: #5c7cfa !important; border-bottom: 1px solid #e0e0e0 !important; padding-bottom: 8px !important; }
 h3 { font-family: Arial, Helvetica, sans-serif !important; font-size: 10px !important; font-weight: normal !important; letter-spacing: 0.2em !important; text-transform: uppercase !important; color: #5c7cfa !important; border-bottom: 1px solid #e0e0e0 !important; padding-bottom: 8px !important; }
 a { color: #5c7cfa !important; }
 .td, .text { color: #333333 !important; border-color: #e0e0e0 !important; font-family: Arial, Helvetica, sans-serif !important; font-size: 14px !important; background-color: #ffffff !important; }
