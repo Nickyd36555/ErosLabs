@@ -16,7 +16,7 @@ $email_improvements_enabled = class_exists( 'Automattic\WooCommerce\Utilities\Fe
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php echo $email_improvements_enabled ? '<div class="email-introduction">' : ''; ?>
-<p style="font-size:15px;line-height:1.8;color:#d4d4d4;margin:0 0 12px;">
+<p style="font-size:15px;line-height:1.8;color:#333333;margin:0 0 12px;">
 	<?php
 	if ( ! empty( $order->get_billing_first_name() ) ) {
 		printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) );
@@ -25,7 +25,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 	}
 	?>
 </p>
-<p style="font-size:15px;line-height:1.8;color:#d4d4d4;margin:0 0 28px;">
+<p style="font-size:15px;line-height:1.8;color:#333333;margin:0 0 28px;">
 	<?php esc_html_e( 'Your order has been received and is now being processed. We appreciate your trust in Eros Peptides — we\'ll have it on its way to you shortly.', 'woocommerce' ); ?>
 </p>
 <?php echo $email_improvements_enabled ? '</div>' : ''; ?>
