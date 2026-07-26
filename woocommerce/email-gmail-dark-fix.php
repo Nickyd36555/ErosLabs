@@ -10,7 +10,7 @@
  *    Tells Gmail "this email already has a dark theme, leave it alone."
  */
 
-// 1. Dark mode media query via WooCommerce email styles filter
+// 1. Dark mode media query + Gmail [data-ogsc] force-dark override
 add_filter( 'woocommerce_email_styles', function( $css ) {
 	$css .= '
 @media (prefers-color-scheme: dark) {
@@ -18,11 +18,16 @@ add_filter( 'woocommerce_email_styles', function( $css ) {
 	#inner_wrapper, #template_container, #template_header, #body_content, #body_content table td, #body_content_inner_cell { background-color: #141414 !important; }
 	#template_footer, #template_footer td { background-color: #141414 !important; border-top-color: #2a2a2a !important; }
 	p, td, th, div, span, address { color: #d4d4d4 !important; }
-	h1 { color: #f0ece4 !important; }
-	h2 { color: #f0ece4 !important; }
-	h3 { color: #5c7cfa !important; }
-	a { color: #5c7cfa !important; }
+	h1, h2 { color: #f0ece4 !important; }
+	h3, a { color: #5c7cfa !important; }
 }
+[data-ogsc] body, [data-ogsc] #outer_wrapper { background-color: #0c0c0c !important; }
+[data-ogsc] #inner_wrapper, [data-ogsc] #template_container, [data-ogsc] #template_header,
+[data-ogsc] #body_content, [data-ogsc] #body_content table td, [data-ogsc] #body_content_inner_cell { background-color: #141414 !important; }
+[data-ogsc] #template_footer, [data-ogsc] #template_footer td { background-color: #141414 !important; }
+[data-ogsc] p, [data-ogsc] td, [data-ogsc] th, [data-ogsc] div, [data-ogsc] span, [data-ogsc] address { color: #d4d4d4 !important; }
+[data-ogsc] h1, [data-ogsc] h2 { color: #f0ece4 !important; }
+[data-ogsc] h3, [data-ogsc] a { color: #5c7cfa !important; }
 ';
 	return $css;
 }, 10, 1 );
